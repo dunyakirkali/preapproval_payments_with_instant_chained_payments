@@ -27,8 +27,11 @@ end
 def retrieve_payment_data(pay_key)
   api.execute(:PaymentDetails, pay_key: pay_key) do |response|
     if response.success?
-      @paykey = response.pay_key
-      p "Payment status: #{response.payment_exec_status}".green
+      response.payment_info_list.payment_info.each do |payment|
+        p "Receiver: #{payment.receiver.email}"
+        p "Amount: #{payment.receiver.amount}"
+        p "Transaction status: #{payment.transaction_status}".green
+      end
     else
       p "#{response.ack_code}: #{response.error_message}".red
     end

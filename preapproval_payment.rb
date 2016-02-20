@@ -29,7 +29,7 @@ def retrieve_payment_data(pay_key)
     if response.success?
       response.payment_info_list.payment_info.each do |payment|
         p "Receiver: #{payment.receiver.email}"
-        p "Amount: #{payment.receiver.amount}"
+        p "Amount: #{payment.receiver.amount.to_f}"
         p "Transaction status: #{payment.transaction_status}".green
       end
     else

@@ -52,7 +52,8 @@ def preapproval_payment_options
     max_total_amount: BigDecimal("2000.00"),
     currency_code: "USD",
     cancel_url: "http://site.com/cancelled",
-    return_url: "http://site.com/completed"
+    return_url: "http://site.com/completed",
+    feesPayer: "PRIMARYRECEIVER"
   }
 end
 

@@ -45,6 +45,7 @@ def preapproval_payment_options
   {
     ending_date: DateTime.now.next_year,
     starting_date: DateTime.now,
+    senderEmail: 'opotto2@gmail.com',
     max_total_amount: BigDecimal("950.00"),
     currency_code: "USD",
     cancel_url: "http://site.com/cancelled",
@@ -60,7 +61,7 @@ def payment_options(preapproval_key)
     cancel_url:     "https://your-site.com/cancel",
     return_url:     "https://your-site.com/return",
     receivers:      [
-      { email: "tr-personal@gmail.com", amount: 900, primary: true },
+      { email: "onurkucukkece-buyer@gmail.com", amount: 900, primary: true },
       { email: 'onurkucukkece-facilitator@gmail.com', amount: 100 }
     ]
   }

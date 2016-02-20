@@ -49,7 +49,7 @@ def preapproval_payment_options
     ending_date: DateTime.now.next_year,
     starting_date: DateTime.now,
     senderEmail: 'opotto2@gmail.com',
-    max_total_amount: BigDecimal("950.00"),
+    max_total_amount: BigDecimal("2000.00"),
     currency_code: "USD",
     cancel_url: "http://site.com/cancelled",
     return_url: "http://site.com/completed"
